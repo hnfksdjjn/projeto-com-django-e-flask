@@ -1,0 +1,94 @@
+<!-- employees/templates/employees/employee_form.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 500px;
+        }
+
+        label {
+            display: block;
+            text-align: center;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="email"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #f0f0f0;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <form method="POST">
+        <h2>Cadastro</h2>
+        {% csrf_token %}
+        <label for="name">Nome:</label>
+        <input type="text" name="name" required><br>
+
+        <label for="age">Idade:</label>
+        <input type="number" name="age" required><br>
+
+        <label for="position">Cargo:</label>
+        <input type="text" name="position" required><br>
+
+        <label for="salary">Remuneração:</label>
+        <input type="number" name="salary" required><br>
+
+        <label for="phone">Celular:</label>
+        <input type="text" name="phone" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" required><br>
+
+        <button type="submit">Cadastrar</button>
+    </form>
+
+</body>
+</html>
+

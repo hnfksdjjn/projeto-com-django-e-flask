@@ -1,0 +1,65 @@
+<!-- employees/templates/employees/dashboard.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d3d3d3; /* Fundo da tela em cinza */
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .dashboard-content {
+            background-color: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .dashboard-content p {
+            font-size: 20px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .dashboard-figure {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
+</head>
+<body>
+
+    <h2>Dashboard</h2>
+
+    <div class="dashboard-content">
+        <p>Média Salarial: {{ avg_salary }}</p>
+        <div class="dashboard-figure">{{ position_fig|safe }}</div>
+    </div>
+
+</body>
+</html>
+
