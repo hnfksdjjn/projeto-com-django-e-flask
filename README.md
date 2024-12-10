@@ -1,4 +1,4 @@
-# projeto-com-django-e-flask
+# projeto-com-django
 # projeto de cadastro de funcionario com django e flask
 
 Aqui está uma explicação abrangente do seu projeto, que envolve a criação de uma aplicação Django para gerenciar funcionários:
